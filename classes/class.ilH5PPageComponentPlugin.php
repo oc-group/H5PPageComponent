@@ -129,6 +129,13 @@ class ilH5PPageComponentPlugin extends ilPageComponentPlugin
 
         $content_clone = $this->h5p_container->getRepositoryFactory()->content()->cloneContent($content);
 
+        // we cannot retrieve the object id of the new, copied ILIAS object,
+        // which prevents us from referencing it correctly. to avoid problems
+        // like wrong permission settings, we need to mark the parent (type)
+        // as unknown. see e.g. https://jira.sr.solutions/browse/PLH5P-236.
+        $content_clone->setParentType(IContent::PARENT_TYPE_UNKNOWN);
+        $content_clone->setObjId(0);
+
         $this->h5p_container->getRepositoryFactory()->content()->storeContent($content_clone);
         $this->h5p_container->getKernelStorage()->copyPackage(
             $content_clone->getContentId(),
