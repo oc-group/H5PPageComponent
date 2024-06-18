@@ -1,5 +1,9 @@
 # H5PPageComponent Changelog
 
+## 5.0.0
+
+- Added ILIAS 9 compatibility.
+
 ## 4.0.4
 
 - Fixed an issue where the old parent object has been referenced when an ILIAS object is copied.
