@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . "/../vendor/autoload.php";
 
-use srag\Plugins\H5P\CI\Rector\DICTrait\Replacement\VersionComparator;
-use srag\Plugins\H5P\Content\IContentRepository;
 use srag\Plugins\H5P\Content\IContent;
-use srag\Plugins\H5P\ArrayBasedRequestWrapper;
-use srag\Plugins\H5P\RequestHelper;
 use Psr\Http\Message\ServerRequestInterface;
 use ILIAS\DI\Container;
 

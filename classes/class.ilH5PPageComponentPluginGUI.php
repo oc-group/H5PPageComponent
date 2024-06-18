@@ -102,6 +102,11 @@ class ilH5PPageComponentPluginGUI extends ilPageComponentPluginGUI
     protected $toolbar;
 
     /**
+     * @var ilCtrlInterface
+     */
+    protected $ctrl;
+
+    /**
      * @throws LogicException if there was no parent object id in the request.
      */
     public function __construct()
@@ -553,5 +558,10 @@ class ilH5PPageComponentPluginGUI extends ilPageComponentPluginGUI
     protected function getTemplate(): ilGlobalTemplateInterface
     {
         return $this->template;
+    }
+
+    protected function getCtrl(): \ilCtrl
+    {
+        return $this->ctrl;
     }
 }

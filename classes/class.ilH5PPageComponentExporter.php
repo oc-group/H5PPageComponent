@@ -82,7 +82,7 @@ class ilH5PPageComponentExporter extends ilPageComponentPluginExporter
                 "namespace" => "srag\Plugins\H5PPageComponent",
                 "xsd_file" => "",
                 "min" => "8.0",
-                "max" => "8.999",
+                "max" => "",
             ],
         ];
     }
