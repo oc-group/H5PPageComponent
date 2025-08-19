@@ -294,12 +294,12 @@ class ilH5PPageComponentPluginGUI extends ilPageComponentPluginGUI
      */
     protected function exportContent(int $content_id): void
     {
-        $content_data = $this->h5p_container->getKernel()->loadContent($content_id);
-        $this->h5p_container->getKernel()->filterParameters($content_data);
+        $content_data = $this->h5p_container->getExportKernel()->loadContent($content_id);
+        $this->h5p_container->getExportKernel()->filterParameters($content_data);
 
         $export_file = IContainer::H5P_STORAGE_DIR . "/exports/" . $content_data["slug"] . "-" . $content_data["id"] . ".h5p";
 
-        ilFileDelivery::deliverFileAttached($export_file, $content_data["slug"] . ".h5p");
+        ilFileDelivery::deliverFileAttached($export_file, $content_data["slug"] . ".h5p", null, true);
     }
 
     /**
