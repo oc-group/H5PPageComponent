@@ -1,5 +1,10 @@
 # H5PPageComponent Changelog
 
+## 5.0.1
+
+- Fixed an issue which has led to H5P export files being created when a content was rendered.
+- Fixed an issue where H5P export files were not deleted after delivery.
+
 ## 5.0.0
 
 - Added ILIAS 9 compatibility.
